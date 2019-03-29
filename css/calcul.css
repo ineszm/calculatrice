@@ -1,0 +1,20 @@
+.calculatrice
+{
+    margin-left: 550px;
+  margin-top: 150px;
+  width: 250px;
+  background-color: beige;
+  font-size: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+.nom
+{
+    
+    margin-top: 40px;
+    font-size: 55px;
+    text-align: center;
+font-style: italic;
+color: blue;
+font-weight: bolder;
+}

@@ -4,89 +4,93 @@
         <meta charset="utf-8"/>
         <title>CALCULATRICE</title>
         <link rel="stylesheet" href="../css/calcul.css"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
 </head>
-<body>
-<br>
-<br>
+<body onload="setDigit();">
+<script src="../js/calcul.js"></script>
+<p class="nom" >MY CALCULATE</p>
+<div class="main">
     <table class="calculatrice" id="calc">
         <tr>
-            <th colspan="5" class="calc_td_resultat">
-                <input type="text" readonly="readonly" name="txt_cal" id="calc_resultat" class="calc_resultat" onkeydown="javascript:key_detect_calc('calc',event);" />
+            <th colspan="15" class="calc_td_resultat">
+                <input type="text" readonly="readonly" name="txt_cal" id="resultat" class="calc_resultat form-control" />
+                <br>
             </th>
+           
+        </tr>
+        <tr>
+            <td class="calc_td_btn" >
+                    <input type="button" class="btn btn-primary" value="CE" id="initZero" />
+            </td>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-danger" value="&larr;" id="reset"/>
+            </td>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-info" value="%"  id="modulo"/>
+            </td>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-success" value="+" id="plus"  />
+            </td>
         </tr>
         <tr>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="CE" onclick="javascript:f_calc('calc','ce');" />
+                    <input type="button" class="btn btn-success" value="7" id="sept"  />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="&larr;" onclick="javascript:f_calc('calc','nbs');" />
+                    <input type="button" class="btn btn-dark" value="8" id="huit" />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="%" onclick="javascript:f_calc('calc','%');" />
+                    <input type="button" class="btn btn-danger" value="9"  id="neuf" />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="+" onclick="javascript:f_calc('calc','+');" />
-            </td>
-        </tr>
-        <tr>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="7" onclick="javascript:add_calc('calc',7);" />
-            </td>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="8" onclick="javascript:add_calc('calc',8);" />
-            </td>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="9" onclick="javascript:add_calc('calc',9);" />
-            </td>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="-" onclick="javascript:f_calc('calc','-');" />
+                    <input type="button" class="btn btn-info" value="-" id="moins" />
             </td>
         </tr>
             <tr>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="4" onclick="javascript:add_calc('calc',4);" />
+                    <input type="button" class="btn btn-dark" value="4" id="quatre" />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="5" onclick="javascript:add_calc('calc',5);" />
+                    <input type="button" class="btn btn-info" value="5" id="cinq"  />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="6" onclick="javascript:add_calc('calc',6);" />
+                    <input type="button" class="btn btn-success" value="6" id="six" />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="x" onclick="javascript:f_calc('calc','*');" />
-            </td>
-        </tr>
-        <tr>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="1" onclick="javascript:add_calc('calc',1);" />
-            </td>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="2" onclick="javascript:add_calc('calc',2);" />
-            </td>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="3" onclick="javascript:add_calc('calc',3);" />
-            </td>
-            <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="&divide;" onclick="javascript:f_calc('calc','');" />
+                    <input type="button" class="btn btn-primary" value="x" id="mult" />
             </td>
         </tr>
         <tr>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="0" onclick="javascript:add_calc('calc',0);" />
+                    <input type="button" class="btn btn-danger" value="1" id="un"/>
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="&plusmn;" onclick="javascript:f_calc('calc','+-');" />
+                    <input type="button" class="btn btn-success" value="2" id="deux" />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="," onclick="javascript:add_calc('calc','.');" />
+                    <input type="button" class="btn btn-info" value="3" id="trois" />
             </td>
             <td class="calc_td_btn">
-                    <input type="button" class="calc_btn" value="=" onclick="javascript:f_calc('calc','=');" />
+                    <input type="button" class="btn btn-dark" value="&divide;" id="division"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-success" value="0" id="zero" />
+            </td>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-dark" value="&plusmn;" id="moinsplus"/>
+            </td>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-danger" value="," id="virgule" />
+            </td>
+            <td class="calc_td_btn">
+                    <input type="button" class="btn btn-warning" value="=" id="egal"/>
             </td>
         </tr>
     </table>
         
-
+</div>
 
 
 </body>
