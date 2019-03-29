@@ -7,6 +7,7 @@
   font-size: 10px;
   text-align: left;
   font-weight: bold;
+  
 }
 .nom
 {
@@ -17,4 +18,8 @@
 font-style: italic;
 color: blue;
 font-weight: bolder;
+}
+.color
+{
+  background-color: beige;
 }
