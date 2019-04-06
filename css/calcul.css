@@ -1,7 +1,7 @@
 .calculatrice
 {
-    margin-left: 550px;
-  margin-top: 150px;
+  
+  margin-top: 70px;
   width: 250px;
   background-color: beige;
   font-size: 10px;
@@ -16,10 +16,16 @@
     font-size: 55px;
     text-align: center;
 font-style: italic;
-color: blue;
+color: crimson;
 font-weight: bolder;
 }
 .color
 {
   background-color: beige;
+}
+.table
+{
+  border: 2px;
+  margin-left: 480px;
+ 
 }
